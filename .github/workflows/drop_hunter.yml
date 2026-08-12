@@ -2,6 +2,7 @@ name: Crypto Drop Hunter - 3x Daily
 
 # Runs at 8am, 3pm, and 12am UTC
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 8 * * *'     # 8am UTC
     - cron: '0 15 * * *'    # 3pm UTC
