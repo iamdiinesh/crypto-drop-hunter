@@ -254,13 +254,13 @@ class AirdropScraper:
             print(f"[+] Ready to send {len(drops)} drops to {TARGET_EMAIL}")
             
             # Uncomment below when you add environment variables for email
-            """
+            
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
             server.login(sender_email, app_password)
             server.sendmail(sender_email, TARGET_EMAIL, message.as_string())
             server.quit()
             print(f"[+] Email sent to {TARGET_EMAIL}")
-            """
+            
             
         except Exception as e:
             print(f"[-] Error sending email: {e}")
