@@ -237,22 +237,29 @@ def send_email(drops: List[Dict]):
         return
     
     sender_email = os.getenv('SENDER_EMAIL', "dineshgupt369@gmail.com")
-    app_password = os.getenv('APP_PASSWORD', "")
+    app_password = os.getenv('APP_PASSWORD')
     
-    message = MIMEMultipart("alternative")
-    message["Subject"] = f"🤖 Web3 Agent Report - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
-    message["From"] = sender_email
-    message["To"] = TARGET_EMAIL
+    is_demo_run = any('Demo' in drop['title'] for drop in drops)
+    subject = "[DEMO] Web3 Agent Action Report" if is_demo_run else "Web3 Agent Action Report"
+    
+    demo_banner = ""
+    if is_demo_run:
+        demo_banner = """
+        <div style="background-color: #fff3cd; color: #856404; padding: 10px; border: 1px solid #ffeeba; border-radius: 4px; margin-bottom: 20px;">
+            <strong>Note:</strong> The scraper didn't find any new real-time drops today. These are simulated demo drops to show the agent is healthy.
+        </div>
+        """
     
     claimed_drops = [d for d in drops if "Claimed" in d['action']['status']]
     
     html = f"""
     <html>
-      <body style="font-family: Arial; padding: 20px;">
-        <h2>🤖 Web3 Agent Action Report</h2>
+      <body style="font-family: Arial, sans-serif; color: #333;">
+        <h2 style="color: #4CAF50;">🤖 Web3 Agent Action Report</h2>
+        {demo_banner}
         
         <div style="background-color: #e8f5e9; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 5px solid #4CAF50;">
-            <h3 style="margin-top: 0; color: #2e7d32;">🎉 Claimed Today</h3>
+          <h3 style="margin-top: 0; color: #2e7d32;">🎉 Claimed Today</h3>
             <p><strong>Total Drops Claimed:</strong> {len(claimed_drops)}</p>
             <ul style="color: #333;">
     """
@@ -311,14 +318,16 @@ def send_email(drops: List[Dict]):
         
     html += "</table></body></html>"
     
-    part = MIMEText(html, "html")
-    message.attach(part)
+    msg = MIMEText(html, 'html')
+    msg['Subject'] = subject
+    msg['From'] = sender_email
+    msg['To'] = TARGET_EMAIL
     
     try:
         if app_password:
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
             server.login(sender_email, app_password)
-            server.sendmail(sender_email, TARGET_EMAIL, message.as_string())
+            server.sendmail(sender_email, TARGET_EMAIL, msg.as_string())
             server.quit()
             print("[+] Action Report Email sent successfully!")
         else:
