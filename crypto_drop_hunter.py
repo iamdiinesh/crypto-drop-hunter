@@ -80,6 +80,19 @@ class Web3Agent:
         if not self.wallet_address:
             return {"status": "Failed", "reason": "No wallet configured"}
             
+        # Check if wallet has enough funds for gas
+        if WEB3_ENABLED and chain in self.w3_instances:
+            w3 = self.w3_instances[chain]
+            try:
+                balance_wei = w3.eth.get_balance(self.wallet_address)
+                balance_eth = w3.from_wei(balance_wei, 'ether')
+                balance_usd = float(balance_eth) * TOKEN_PRICES.get(chain, 0)
+                
+                if balance_usd < usd_cost:
+                    return {"status": "Insufficient Funds", "reason": f"Balance ${balance_usd:.2f} < Gas ${usd_cost:.2f}"}
+            except Exception as e:
+                print(f"Failed to check balance: {e}")
+
         if usd_cost > MAX_AUTO_GAS_USD:
             return {"status": "Approval Required", "reason": f"Gas (${usd_cost:.2f}) exceeds $10 limit"}
             
@@ -144,10 +157,28 @@ def send_email(drops: List[Dict]):
     message["From"] = sender_email
     message["To"] = TARGET_EMAIL
     
+    claimed_drops = [d for d in drops if "Claimed" in d['action']['status']]
+    
     html = f"""
     <html>
       <body style="font-family: Arial; padding: 20px;">
         <h2>🤖 Web3 Agent Action Report</h2>
+        
+        <div style="background-color: #e8f5e9; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 5px solid #4CAF50;">
+            <h3 style="margin-top: 0; color: #2e7d32;">🎉 Claimed Today</h3>
+            <p><strong>Total Drops Claimed:</strong> {len(claimed_drops)}</p>
+            <ul style="color: #333;">
+    """
+    
+    for d in claimed_drops:
+        html += f"<li><strong>{d['title']}</strong> - Expected Reward: {d['potential_value']}</li>"
+    if not claimed_drops:
+        html += "<li>None today.</li>"
+        
+    html += """
+            </ul>
+        </div>
+        
         <table style="width: 100%; border-collapse: collapse;">
           <tr style="background-color: #f9f9f9;">
             <th style="padding: 10px; border: 1px solid #ddd;">Project</th>
@@ -161,11 +192,14 @@ def send_email(drops: List[Dict]):
     for drop in drops:
         status_color = "green" if "Claimed" in drop['action']['status'] else "orange" if "Approval" in drop['action']['status'] else "red"
         
-        action_btn = ""
+        action_btn = drop['action'].get('reason', '')
         if "Approval Required" in drop['action']['status']:
-            action_btn = f"<a href='{drop['url']}' style='background-color: orange; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px;'>Approve (Valid for 3h)</a>"
+            action_btn = f"<a href='{drop['url']}' style='background-color: orange; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px;'>Approve (Valid for 3h)</a><br><br><span style='font-size:12px; color:gray;'>{drop['action']['reason']}</span>"
         elif "Claimed" in drop['action']['status']:
             action_btn = f"<span style='color: green;'>{drop['action'].get('tx_hash', '')}</span>"
+        elif "Insufficient Funds" in drop['action']['status']:
+            action_btn = f"<strong style='color: red;'>Please add more funds!</strong><br><span style='font-size:12px;'>{drop['action']['reason']}</span>"
+
             
         html += f"""
           <tr>
