@@ -155,11 +155,23 @@ class AirdropScraper:
             dummy_contract = "0x" + os.urandom(20).hex()
             all_drops.append({
                 'source': 'OpenSea',
-                'title': 'Demo Web3 Drop',
+                'title': 'Demo NFT Drop (Cheap Gas)',
                 'chain': 'polygon',
                 'url': 'https://opensea.io/drops',
                 'contract': dummy_contract,
-                'potential_value': '100 DUMMY Tokens'
+                'potential_value': 'Rare Avatar NFT',
+                'reward_type': 'NFT',
+                'value_usd': 25.00
+            })
+            all_drops.append({
+                'source': 'AirdropAlert',
+                'title': 'Demo Token Drop (Medium Gas)',
+                'chain': 'arbitrum',
+                'url': 'https://airdropalert.com',
+                'contract': dummy_contract,
+                'potential_value': '500 ARB',
+                'reward_type': 'Token',
+                'value_usd': 150.00
             })
             
         return all_drops
@@ -198,11 +210,13 @@ def send_email(drops: List[Dict]):
             </ul>
         </div>
         
-        <table style="width: 100%; border-collapse: collapse;">
-          <tr style="background-color: #f9f9f9;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+          <tr style="background-color: #f9f9f9; text-align: left;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Source</th>
             <th style="padding: 10px; border: 1px solid #ddd;">Project</th>
-            <th style="padding: 10px; border: 1px solid #ddd;">Chain</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Reward</th>
             <th style="padding: 10px; border: 1px solid #ddd;">Gas Cost</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Est. Profit</th>
             <th style="padding: 10px; border: 1px solid #ddd;">Status</th>
             <th style="padding: 10px; border: 1px solid #ddd;">Action</th>
           </tr>
@@ -225,12 +239,15 @@ def send_email(drops: List[Dict]):
         elif "Skipped" in drop['action']['status']:
             action_btn = f"<span style='color: gray;'>Skipped: {drop['action']['reason']}</span>"
 
+        profit_color = "green" if drop.get('profit', 0) > 0 else "red"
             
         html += f"""
           <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">{drop['title']}</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">{drop['chain'].upper()}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;"><a href="{drop['url']}">{drop.get('source', 'Unknown')}</a></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{drop['title']}<br><span style="font-size:10px; color:gray;">{drop['chain'].upper()}</span></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{drop.get('potential_value', 'Unknown')}<br><span style="font-size:10px; color:gray;">Type: {drop.get('reward_type', 'Unknown')}</span></td>
             <td style="padding: 10px; border: 1px solid #ddd;">${drop['gas_usd']:.2f}</td>
+            <td style="padding: 10px; border: 1px solid #ddd; color: {profit_color}; font-weight: bold;">${drop.get('profit', 0):.2f}</td>
             <td style="padding: 10px; border: 1px solid #ddd; color: {status_color}; font-weight: bold;">{drop['action']['status']}</td>
             <td style="padding: 10px; border: 1px solid #ddd;">{action_btn}</td>
           </tr>
@@ -264,7 +281,15 @@ def main():
     for drop in drops:
         # 1. Estimate Gas
         gas_usd = agent.estimate_gas_usd(drop['chain'], drop['contract'])
+        
+        # Override for demo drops to ensure we see the different email templates
+        if "Cheap" in drop['title']:
+            gas_usd = 0.50
+        elif "Medium" in drop['title']:
+            gas_usd = 15.00
+            
         drop['gas_usd'] = gas_usd
+        drop['profit'] = drop.get('value_usd', 0) - gas_usd
         
         # 2. Attempt Claim or Request Approval
         action_result = agent.attempt_claim(drop['chain'], drop['contract'], gas_usd)
