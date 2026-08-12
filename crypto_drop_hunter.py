@@ -27,6 +27,7 @@ except ImportError:
 TARGET_EMAIL = "dineshgupt369@gmail.com"
 CHAINS = ["ethereum", "polygon", "arbitrum"]
 MAX_AUTO_GAS_USD = 10.0
+MAX_HARD_GAS_USD = 20.0
 
 # Public RPCs
 RPCS = {
@@ -95,6 +96,9 @@ class Web3Agent:
             except Exception as e:
                 print(f"Failed to check balance: {e}")
 
+        if usd_cost > MAX_HARD_GAS_USD:
+            return {"status": "Skipped", "reason": f"Gas (${usd_cost:.2f}) exceeds $20 hard limit"}
+            
         if usd_cost > MAX_AUTO_GAS_USD:
             return {"status": "Approval Required", "reason": f"Gas (${usd_cost:.2f}) exceeds $10 limit"}
             
@@ -209,11 +213,17 @@ def send_email(drops: List[Dict]):
         
         action_btn = drop['action'].get('reason', '')
         if "Approval Required" in drop['action']['status']:
-            action_btn = f"<a href='{drop['url']}' style='background-color: orange; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px;'>Approve (Valid for 3h)</a><br><br><span style='font-size:12px; color:gray;'>{drop['action']['reason']}</span>"
+            action_btn = f"""
+                <a href='{drop['url']}?action=approve' style='background-color: orange; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px;'>Approve</a>
+                <a href='{drop['url']}?action=reject' style='background-color: #f44336; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px; margin-left: 5px;'>Reject</a>
+                <br><br><span style='font-size:12px; color:gray;'>{drop['action']['reason']} (Valid 3h)</span>
+            """
         elif "Claimed" in drop['action']['status']:
             action_btn = f"<span style='color: green;'>{drop['action'].get('tx_hash', '')}</span>"
         elif "Insufficient Funds" in drop['action']['status']:
             action_btn = f"<strong style='color: red;'>Please add more funds!</strong><br><span style='font-size:12px;'>{drop['action']['reason']}</span>"
+        elif "Skipped" in drop['action']['status']:
+            action_btn = f"<span style='color: gray;'>Skipped: {drop['action']['reason']}</span>"
 
             
         html += f"""
