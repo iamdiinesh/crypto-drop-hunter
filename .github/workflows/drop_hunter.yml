@@ -1,13 +1,10 @@
-name: Crypto Drop Hunter - 3x Daily
+name: Crypto Drop Hunter - Every 20 Mins
 
-# Runs at 8am, 3pm, and 12am UTC
+# Runs 3 times an hour, all day
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 8 * * *'     # 8am UTC
-    - cron: '0 12 * * *'    # 12pm UTC
-    - cron: '0 15 * * *'    # 3pm UTC
-    - cron: '0 0 * * *'     # 12am UTC
+    - cron: '*/20 * * * *'  # Every 20 minutes
 
 jobs:
   hunt-drops:
