@@ -45,7 +45,9 @@ TOKEN_PRICES = {
 class Web3Agent:
     def __init__(self, private_key: str):
         self.private_key = private_key
-        self.w3_instances = {chain: Web3(Web3.HTTPProvider(rpc)) for chain, rpc in RPCS.items()}
+        self.w3_instances = {}
+        if WEB3_ENABLED:
+            self.w3_instances = {chain: Web3(Web3.HTTPProvider(rpc)) for chain, rpc in RPCS.items()}
         
         # Determine wallet address if PK is provided
         self.wallet_address = None
