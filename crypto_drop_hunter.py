@@ -306,7 +306,10 @@ def send_email(drops: List[Dict]):
             
         html += f"""
           <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;"><a href="{drop['url']}">{drop.get('source', 'Unknown')}</a></td>
+            <td style="padding: 10px; border: 1px solid #ddd; word-break: break-all;">
+                <strong>{drop.get('source', 'Unknown')}</strong><br>
+                <a href="{drop['url']}" style="font-size: 11px; color: #1a0dab;">{drop['url']}</a>
+            </td>
             <td style="padding: 10px; border: 1px solid #ddd;">{drop['title']}<br><span style="font-size:10px; color:gray;">{drop['chain'].upper()}</span></td>
             <td style="padding: 10px; border: 1px solid #ddd;">{drop.get('potential_value', 'Unknown')}<br><span style="font-size:10px; color:gray;">Type: {drop.get('reward_type', 'Unknown')}</span></td>
             <td style="padding: 10px; border: 1px solid #ddd;">${drop['gas_usd']:.2f}</td>
