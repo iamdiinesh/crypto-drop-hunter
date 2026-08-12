@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 8 * * *'     # 8am UTC
+    - cron: '0 12 * * *'    # 12pm UTC
     - cron: '0 15 * * *'    # 3pm UTC
     - cron: '0 0 * * *'     # 12am UTC
 
