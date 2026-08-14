@@ -180,7 +180,7 @@ TARGET_EMAIL = "dineshgupt369@gmail.com"  # Or another email
 
 ## ⚠️ Important Notes
 
-✅ **Safe:** No wallet access needed. You manually claim drops via Phantom  
+
 ✅ **Free:** GitHub Actions free tier = unlimited runs  
 ✅ **Automated:** Runs on schedule, no manual intervention  
 ✅ **Your data:** Results only in your email + GitHub artifacts (7-day retention)

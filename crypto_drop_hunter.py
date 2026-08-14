@@ -236,6 +236,7 @@ def send_email(drops: List[Dict]):
     if not drops:
         return
     
+    # Write the html draft to file first
     sender_email = os.getenv('SENDER_EMAIL', "dineshgupt369@gmail.com")
     app_password = os.getenv('APP_PASSWORD')
     
@@ -327,6 +328,12 @@ def send_email(drops: List[Dict]):
     msg['To'] = TARGET_EMAIL
     
     try:
+        with open("email_draft.html", "w", encoding="utf-8") as f:
+            f.write(html)
+    except Exception as e:
+        print(f"[-] Error writing email draft: {e}")
+        
+    try:
         if app_password:
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
             server.login(sender_email, app_password)
@@ -338,6 +345,23 @@ def send_email(drops: List[Dict]):
     except Exception as e:
         print(f"[-] Error sending email: {e}")
 
+def load_checked_drops(filepath="checked_drops.json") -> set:
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                return set(data)
+        except Exception as e:
+            print(f"[!] Error loading checked drops: {e}")
+    return set()
+
+def save_checked_drops(checked_drops: set, filepath="checked_drops.json"):
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(sorted(list(checked_drops)), f, indent=4)
+    except Exception as e:
+        print(f"[-] Error saving checked drops: {e}")
+
 def main():
     pk = os.getenv('WALLET_PRIVATE_KEY', '')
     agent = Web3Agent(pk)
@@ -346,7 +370,15 @@ def main():
     drops = scraper.scrape_all()
     processed_drops = []
     
+    checked_drops = load_checked_drops()
+    has_new_checked_drops = False
+    
     for drop in drops:
+        drop_key = f"{drop['source']}:{drop['chain']}:{drop['title']}"
+        if drop_key in checked_drops:
+            print(f"[*] Skipping already checked drop: {drop['title']} ({drop['chain']})")
+            continue
+            
         # 1. Estimate Gas
         gas_usd = agent.estimate_gas_usd(drop['chain'], drop['contract'])
         
@@ -364,9 +396,29 @@ def main():
         drop['action'] = action_result
         
         processed_drops.append(drop)
+        checked_drops.add(drop_key)
+        has_new_checked_drops = True
         
-    send_email(processed_drops)
-    print(f"[✓] Processed {len(processed_drops)} drops")
+    if has_new_checked_drops:
+        save_checked_drops(checked_drops)
+        
+    # Only email if there is a decision needed or it has been done
+    email_drops = [
+        drop for drop in processed_drops 
+        if "Claimed" in drop['action']['status'] or "Approval" in drop['action']['status']
+    ]
+    
+    if email_drops:
+        send_email(email_drops)
+    else:
+        print("[*] No drops required action/email (all skipped or no new drops).")
+        try:
+            with open("email_draft.html", "w", encoding="utf-8") as f:
+                f.write("<h3>No action required for this run.</h3>")
+        except Exception:
+            pass
+            
+    print(f"[OK] Processed {len(processed_drops)} new drops")
 
 if __name__ == "__main__":
     main()
