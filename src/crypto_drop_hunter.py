@@ -31,6 +31,10 @@ MAX_AUTO_GAS_USD = 10.0
 MAX_HARD_GAS_USD = 20.0
 TIMEZONE_OFFSET = 8  # Local timezone offset (UTC+8)
 
+# Databases relative paths
+CHECKED_DROPS_FILE = os.path.join("data", "checked_drops.json")
+DAILY_STATS_FILE = os.path.join("data", "daily_stats.json")
+
 # Public RPCs
 RPCS = {
     "ethereum": "https://cloudflare-eth.com",
@@ -381,6 +385,10 @@ def load_json_file(filepath: str, default_val) -> any:
 
 def save_json_file(filepath: str, data: any):
     try:
+        # Auto-create parent directory if needed
+        dir_name = os.path.dirname(filepath)
+        if dir_name:
+            os.makedirs(dir_name, exist_ok=True)
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=4)
     except Exception as e:
@@ -388,8 +396,6 @@ def save_json_file(filepath: str, data: any):
 
 
 def get_realtime_alert_html(drops: List[Dict]) -> str:
-    claimed_drops = [d for d in drops if "Claimed" in d['action']['status']]
-    
     html = f"""
     <html>
       <body style="font-family: Arial, sans-serif; color: #333;">
@@ -541,8 +547,8 @@ def main():
     scraper = AirdropScraper()
     
     # 1. Load historical database files
-    checked_drops = set(load_json_file("checked_drops.json", []))
-    daily_stats = load_json_file("daily_stats.json", {
+    checked_drops = set(load_json_file(CHECKED_DROPS_FILE, []))
+    daily_stats = load_json_file(DAILY_STATS_FILE, {
         "last_summary_date": "",
         "date": "",
         "visited_sources": [],
@@ -619,7 +625,7 @@ def main():
         
         if "Claimed" in status_str:
             daily_stats["accomplished_count"] += 1
-            daily_stats["earned_usd"] += drop.get('profit', 0.0) if drop.get('profit', 0.0) > 0 else 10.0 # hypothetical reward value if profit negative/0
+            daily_stats["earned_usd"] += drop.get('profit', 0.0) if drop.get('profit', 0.0) > 0 else 10.0
         elif "Approval" in status_str:
             daily_stats["accomplished_count"] += 1
         elif "Skipped" in status_str or "Insufficient" in status_str:
@@ -627,9 +633,9 @@ def main():
 
     # Save databases
     if has_new_checked_drops:
-        save_json_file("checked_drops.json", sorted(list(checked_drops)))
+        save_json_file(CHECKED_DROPS_FILE, sorted(list(checked_drops)))
         
-    save_json_file("daily_stats.json", daily_stats)
+    save_json_file(DAILY_STATS_FILE, daily_stats)
     
     # 4. Trigger Real-time Alert Emails (only if immediate action was taken)
     realtime_alerts = [
@@ -651,7 +657,7 @@ def main():
         
         # Save summary date to ensure it only runs once per day
         daily_stats["last_summary_date"] = current_date_str
-        save_json_file("daily_stats.json", daily_stats)
+        save_json_file(DAILY_STATS_FILE, daily_stats)
         print("[+] Daily 8:00 PM summary completed.")
 
     print(f"[OK] Run complete. Processed {len(processed_this_run)} new drops.")

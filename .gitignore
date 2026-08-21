@@ -1,0 +1,4 @@
+email_draft.html
+__pycache__/
+*.pyc
+.env
