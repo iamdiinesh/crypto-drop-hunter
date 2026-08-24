@@ -1,77 +1,27 @@
 {
     "last_summary_date": "2026-08-24",
-    "date": "2026-08-24",
+    "date": "2026-08-25",
     "visited_sources": [
-        "https://airdrops.io/hertzflow/",
-        "https://airdrops.io/yakkamon/",
-        "https://airdrops.io/wager-predict/",
-        "https://airdrops.io/fortune-foes/",
-        "https://airdrops.io/retium/",
-        "https://airdrops.io",
-        "https://airdrops.io/sight/",
-        "https://airdrops.io/sweep-finance/",
-        "https://airdrops.io/solpump/",
-        "https://airdrops.io/ondo-perps/",
         "https://opensea.io/drops",
-        "https://airdrops.io/startale/",
-        "https://airdrops.io/savior-of-health/",
-        "https://airdrops.io/voice/",
-        "https://airdrops.io/nowa/",
         "https://airdropalert.com",
+        "https://airdrops.io/yakkamon/",
+        "https://airdrops.io/fortune-foes/",
+        "https://airdrops.io/mint-2/",
+        "https://airdrops.io/tbook/",
         "https://airdrops.io/nava-ai/",
         "https://airdrops.io/bitrobot/",
-        "https://airdrops.io/mint-2/",
+        "https://airdrops.io",
+        "https://airdrops.io/solpump/",
+        "https://airdrops.io/sight/",
+        "https://airdrops.io/nowa/",
         "https://airdrops.io/omega/",
-        "https://airdrops.io/tbook/",
+        "https://airdrops.io/retium/",
+        "https://airdrops.io/hertzflow/",
+        "https://airdrops.io/startale/",
         "https://airdrops.io/dow-protocol/"
     ],
-    "drops_processed": [
-        {
-            "title": "MINT",
-            "url": "https://airdrops.io/mint-2/",
-            "chain": "base",
-            "reward_type": "Token",
-            "delivery_date": "Q4 2026 To qualify, you need a MINT account and at least $50 wagered cumulativel",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_base_0xe39945"
-            }
-        },
-        {
-            "title": "TBook",
-            "url": "https://airdrops.io/tbook/",
-            "chain": "sui",
-            "reward_type": "NFT",
-            "delivery_date": "Targeted for Q1 2026 in official documentation; not yet completed",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_sui_0xf5d23f"
-            }
-        },
-        {
-            "title": "Omega",
-            "url": "https://airdrops.io/omega/",
-            "chain": "aptos",
-            "reward_type": "NFT",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_aptos_0xa5a417"
-            }
-        },
-        {
-            "title": "Dow Protocol",
-            "url": "https://airdrops.io/dow-protocol/",
-            "chain": "ethereum",
-            "reward_type": "Token",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Skipped",
-                "reason": "Gas ($999.00) exceeds $20 hard limit"
-            }
-        }
-    ],
-    "accomplished_count": 3,
-    "earned_usd": 30.0,
-    "skipped_count": 1
+    "drops_processed": [],
+    "accomplished_count": 0,
+    "earned_usd": 0.0,
+    "skipped_count": 0
 }
