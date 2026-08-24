@@ -1,5 +1,5 @@
 {
-    "last_summary_date": "2026-08-23",
+    "last_summary_date": "2026-08-24",
     "date": "2026-08-24",
     "visited_sources": [
         "https://airdrops.io/hertzflow/",
@@ -19,10 +19,23 @@
         "https://airdrops.io/nowa/",
         "https://airdropalert.com",
         "https://airdrops.io/nava-ai/",
-        "https://airdrops.io/bitrobot/"
+        "https://airdrops.io/bitrobot/",
+        "https://airdrops.io/mint-2/"
     ],
-    "drops_processed": [],
-    "accomplished_count": 0,
-    "earned_usd": 0.0,
+    "drops_processed": [
+        {
+            "title": "MINT",
+            "url": "https://airdrops.io/mint-2/",
+            "chain": "base",
+            "reward_type": "Token",
+            "delivery_date": "Q4 2026 To qualify, you need a MINT account and at least $50 wagered cumulativel",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_base_0xe39945"
+            }
+        }
+    ],
+    "accomplished_count": 1,
+    "earned_usd": 10.0,
     "skipped_count": 0
 }
