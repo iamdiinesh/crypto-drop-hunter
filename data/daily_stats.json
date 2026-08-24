@@ -22,7 +22,8 @@
         "https://airdrops.io/bitrobot/",
         "https://airdrops.io/mint-2/",
         "https://airdrops.io/omega/",
-        "https://airdrops.io/tbook/"
+        "https://airdrops.io/tbook/",
+        "https://airdrops.io/dow-protocol/"
     ],
     "drops_processed": [
         {
@@ -57,9 +58,20 @@
                 "status": "Claimed Successfully",
                 "tx_hash": "0x_simulated_tx_aptos_0xa5a417"
             }
+        },
+        {
+            "title": "Dow Protocol",
+            "url": "https://airdrops.io/dow-protocol/",
+            "chain": "ethereum",
+            "reward_type": "Token",
+            "delivery_date": "Not announced",
+            "action_taken": {
+                "status": "Skipped",
+                "reason": "Gas ($999.00) exceeds $20 hard limit"
+            }
         }
     ],
     "accomplished_count": 3,
     "earned_usd": 30.0,
-    "skipped_count": 0
+    "skipped_count": 1
 }
