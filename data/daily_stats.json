@@ -19,7 +19,8 @@
         "https://airdrops.io/hertzflow/",
         "https://airdrops.io/startale/",
         "https://airdrops.io/dow-protocol/",
-        "https://airdrops.io/mint-io/"
+        "https://airdrops.io/mint-io/",
+        "https://airdrops.io/flop-labs/"
     ],
     "drops_processed": [
         {
@@ -32,9 +33,20 @@
                 "status": "Claimed Successfully",
                 "tx_hash": "0x_simulated_tx_bsc, sui_0x834f8a"
             }
+        },
+        {
+            "title": "Flop Labs",
+            "url": "https://airdrops.io/flop-labs/",
+            "chain": "own chain",
+            "reward_type": "Token",
+            "delivery_date": "Airdrop targeted for Q4 2026, genesis block targeted for Q1 2027 The testnet is ",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_own chain_0x30583d"
+            }
         }
     ],
-    "accomplished_count": 1,
-    "earned_usd": 10.0,
+    "accomplished_count": 2,
+    "earned_usd": 20.0,
     "skipped_count": 0
 }
