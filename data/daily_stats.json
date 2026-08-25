@@ -1,52 +1,27 @@
 {
     "last_summary_date": "2026-08-25",
-    "date": "2026-08-25",
+    "date": "2026-08-26",
     "visited_sources": [
-        "https://opensea.io/drops",
-        "https://airdropalert.com",
-        "https://airdrops.io/yakkamon/",
-        "https://airdrops.io/fortune-foes/",
-        "https://airdrops.io/mint-2/",
-        "https://airdrops.io/tbook/",
-        "https://airdrops.io/nava-ai/",
-        "https://airdrops.io/bitrobot/",
         "https://airdrops.io",
+        "https://airdrops.io/tbook/",
         "https://airdrops.io/solpump/",
-        "https://airdrops.io/sight/",
+        "https://airdrops.io/fortune-foes/",
+        "https://airdrops.io/mint-io/",
+        "https://opensea.io/drops",
         "https://airdrops.io/nowa/",
-        "https://airdrops.io/omega/",
-        "https://airdrops.io/retium/",
-        "https://airdrops.io/hertzflow/",
         "https://airdrops.io/startale/",
         "https://airdrops.io/dow-protocol/",
-        "https://airdrops.io/mint-io/",
-        "https://airdrops.io/flop-labs/"
+        "https://airdrops.io/retium/",
+        "https://airdrops.io/sight/",
+        "https://airdrops.io/hertzflow/",
+        "https://airdropalert.com",
+        "https://airdrops.io/omega/",
+        "https://airdrops.io/flop-labs/",
+        "https://airdrops.io/bitrobot/",
+        "https://airdrops.io/nava-ai/"
     ],
-    "drops_processed": [
-        {
-            "title": "Dow Protocol",
-            "url": "https://airdrops.io/dow-protocol/",
-            "chain": "bsc, sui",
-            "reward_type": "Allowlist/Points",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_bsc, sui_0x834f8a"
-            }
-        },
-        {
-            "title": "Flop Labs",
-            "url": "https://airdrops.io/flop-labs/",
-            "chain": "own chain",
-            "reward_type": "Token",
-            "delivery_date": "Airdrop targeted for Q4 2026, genesis block targeted for Q1 2027 The testnet is ",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_own chain_0x30583d"
-            }
-        }
-    ],
-    "accomplished_count": 2,
-    "earned_usd": 20.0,
+    "drops_processed": [],
+    "accomplished_count": 0,
+    "earned_usd": 0.0,
     "skipped_count": 0
 }
