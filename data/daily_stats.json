@@ -1,40 +1,28 @@
 {
     "last_summary_date": "2026-08-26",
-    "date": "2026-08-28",
+    "date": "2026-08-29",
     "visited_sources": [
-        "https://airdrops.io/ondo-perps/",
-        "https://airdrops.io/startale/",
-        "https://opensea.io/drops",
-        "https://airdrops.io/sight/",
         "https://airdrops.io/bitrobot/",
-        "https://airdrops.io/nowa/",
-        "https://airdrops.io/nava-ai/",
-        "https://airdrops.io",
-        "https://airdrops.io/dow-protocol/",
-        "https://airdrops.io/tbook/",
+        "https://airdrops.io/startale/",
         "https://airdrops.io/omega/",
+        "https://airdrops.io/nava-ai/",
+        "https://airdrops.io/nowa/",
+        "https://airdrops.io",
+        "https://airdrops.io/retium/",
+        "https://opensea.io/drops",
+        "https://airdrops.io/tbook/",
+        "https://airdrops.io/mint-io/",
         "https://airdrops.io/monetrix/",
         "https://airdropalert.com",
-        "https://airdrops.io/hertzflow/",
+        "https://airdrops.io/dow-protocol/",
         "https://airdrops.io/flop-labs/",
-        "https://airdrops.io/mint-io/",
-        "https://airdrops.io/retium/",
-        "https://airdrops.io/fortune-foes/"
+        "https://airdrops.io/hertzflow/",
+        "https://airdrops.io/sight/",
+        "https://airdrops.io/fortune-foes/",
+        "https://airdrops.io/ondo-perps/"
     ],
-    "drops_processed": [
-        {
-            "title": "Monetrix",
-            "url": "https://airdrops.io/monetrix/",
-            "chain": "hyperliquid",
-            "reward_type": "Allowlist/Points",
-            "delivery_date": "Not announced Season 0 rewards three groups: stablecoin holders, yield participa",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_hyperliquid_0x716ae1"
-            }
-        }
-    ],
-    "accomplished_count": 1,
-    "earned_usd": 10.0,
+    "drops_processed": [],
+    "accomplished_count": 0,
+    "earned_usd": 0.0,
     "skipped_count": 0
 }
