@@ -1,42 +1,28 @@
 {
     "last_summary_date": "2026-08-30",
-    "date": "2026-08-30",
+    "date": "2026-08-31",
     "visited_sources": [
-        "https://airdrops.io/monetrix/",
         "https://airdrops.io/flop-labs/",
-        "https://airdrops.io/startale/",
-        "https://airdrops.io/ondo-perps/",
-        "https://airdrops.io",
-        "https://airdropalert.com",
-        "https://airdrops.io/omega/",
-        "https://airdrops.io/mint-io/",
-        "https://airdrops.io/sight/",
-        "https://opensea.io/drops",
-        "https://airdrops.io/dow-protocol/",
-        "https://airdrops.io/tbook/",
         "https://airdrops.io/bitrobot/",
-        "https://airdrops.io/nava-ai/",
         "https://airdrops.io/retium/",
-        "https://airdrops.io/fortune-foes/",
+        "https://airdrops.io/sight/",
+        "https://airdrops.io/tbook/",
+        "https://airdrops.io/nava-ai/",
+        "https://airdrops.io/dow-protocol/",
         "https://airdrops.io/hertzflow/",
         "https://airdrops.io/nowa/",
+        "https://airdrops.io",
+        "https://airdrops.io/mint-io/",
+        "https://airdrops.io/omega/",
+        "https://airdrops.io/solpump/",
         "https://airdrops.io/nado/",
-        "https://airdrops.io/solpump/"
+        "https://opensea.io/drops",
+        "https://airdropalert.com",
+        "https://airdrops.io/fortune-foes/",
+        "https://airdrops.io/startale/"
     ],
-    "drops_processed": [
-        {
-            "title": "Nado",
-            "url": "https://airdrops.io/nado/",
-            "chain": "ink",
-            "reward_type": "NFT",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_ink_0x5a4e7f"
-            }
-        }
-    ],
-    "accomplished_count": 1,
-    "earned_usd": 10.0,
+    "drops_processed": [],
+    "accomplished_count": 0,
+    "earned_usd": 0.0,
     "skipped_count": 0
 }
