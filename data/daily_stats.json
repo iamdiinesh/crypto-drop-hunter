@@ -1,5 +1,5 @@
 {
-    "last_summary_date": "2026-09-03",
+    "last_summary_date": "2026-09-04",
     "date": "2026-09-04",
     "visited_sources": [
         "https://airdrops.io/omega/",
@@ -18,10 +18,35 @@
         "https://airdrops.io/c8ntinuum/",
         "https://airdrops.io/neosoul/",
         "https://airdrops.io/tbook/",
-        "https://airdrops.io/beldex-2/"
+        "https://airdrops.io/beldex-2/",
+        "https://airdrops.io/entropy/",
+        "https://airdrops.io/reels/"
     ],
-    "drops_processed": [],
-    "accomplished_count": 0,
-    "earned_usd": 0.0,
+    "drops_processed": [
+        {
+            "title": "Reels",
+            "url": "https://airdrops.io/reels/",
+            "chain": "own chain",
+            "reward_type": "NFT",
+            "delivery_date": "Not announced",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_own chain_0x69e107"
+            }
+        },
+        {
+            "title": "Entropy",
+            "url": "https://airdrops.io/entropy/",
+            "chain": "hyperliquid",
+            "reward_type": "NFT",
+            "delivery_date": "Not announced",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_hyperliquid_0x27ae93"
+            }
+        }
+    ],
+    "accomplished_count": 2,
+    "earned_usd": 20.0,
     "skipped_count": 0
 }
