@@ -20,10 +20,23 @@
         "https://airdrops.io/beldex/",
         "https://airdrops.io/omega/",
         "https://airdrops.io/c8ntinuum/",
-        "https://airdrops.io/nado/"
+        "https://airdrops.io/nado/",
+        "https://airdrops.io/rep/"
     ],
-    "drops_processed": [],
-    "accomplished_count": 0,
-    "earned_usd": 0.0,
+    "drops_processed": [
+        {
+            "title": "REP",
+            "url": "https://airdrops.io/rep/",
+            "chain": "base",
+            "reward_type": "NFT",
+            "delivery_date": "TBAPoints accrue two ways",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_base_0xcd651c"
+            }
+        }
+    ],
+    "accomplished_count": 1,
+    "earned_usd": 10.0,
     "skipped_count": 0
 }
