@@ -1,28 +1,50 @@
 {
     "last_summary_date": "2026-09-10",
-    "date": "2026-09-10",
+    "date": "2026-09-11",
     "visited_sources": [
-        "https://airdropalert.com",
-        "https://airdrops.io/flop-labs/",
         "https://opensea.io/drops",
+        "https://airdrops.io",
+        "https://airdrops.io/vangrid/",
+        "https://airdrops.io/dualmint/",
+        "https://airdrops.io/ammora/",
+        "https://airdrops.io/blackboard/",
         "https://airdrops.io/gyndore/",
-        "https://airdrops.io/solpump/",
+        "https://airdrops.io/c8ntinuum/",
+        "https://airdrops.io/laptop/",
         "https://airdrops.io/reels/",
         "https://airdrops.io/beldex/",
-        "https://airdrops.io/rep/",
-        "https://airdrops.io/dualmint/",
-        "https://airdrops.io/dow-protocol/",
-        "https://airdrops.io/vangrid/",
-        "https://airdrops.io/entropy/",
+        "https://airdrops.io/amadeus-protocol/",
         "https://airdrops.io/neosoul/",
-        "https://airdrops.io/nado/",
-        "https://airdrops.io/laptop/",
-        "https://airdrops.io/c8ntinuum/",
-        "https://airdrops.io",
-        "https://airdrops.io/amadeus-protocol/"
+        "https://airdropalert.com",
+        "https://airdrops.io/rep/",
+        "https://airdrops.io/solpump/",
+        "https://airdrops.io/entropy/"
     ],
-    "drops_processed": [],
-    "accomplished_count": 0,
-    "earned_usd": 0.0,
+    "drops_processed": [
+        {
+            "title": "Blackboard",
+            "url": "https://airdrops.io/blackboard/",
+            "chain": "own chain",
+            "reward_type": "Allowlist/Points",
+            "delivery_date": "Not announced Two scores run in parallel and are easy to mix up",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_own chain_0xebfac0"
+            }
+        },
+        {
+            "title": "Ammora",
+            "url": "https://airdrops.io/ammora/",
+            "chain": "giwa",
+            "reward_type": "Allowlist/Points",
+            "delivery_date": "Not announced",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_giwa_0xb7eab5"
+            }
+        }
+    ],
+    "accomplished_count": 2,
+    "earned_usd": 20.0,
     "skipped_count": 0
 }
