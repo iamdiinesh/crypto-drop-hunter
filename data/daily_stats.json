@@ -18,7 +18,8 @@
         "https://airdropalert.com",
         "https://airdrops.io/rep/",
         "https://airdrops.io/solpump/",
-        "https://airdrops.io/entropy/"
+        "https://airdrops.io/entropy/",
+        "https://airdrops.io/worldie/"
     ],
     "drops_processed": [
         {
@@ -42,9 +43,20 @@
                 "status": "Claimed Successfully",
                 "tx_hash": "0x_simulated_tx_giwa_0xb7eab5"
             }
+        },
+        {
+            "title": "Worldie",
+            "url": "https://airdrops.io/worldie/",
+            "chain": "robinhood chain",
+            "reward_type": "Allowlist/Points",
+            "delivery_date": "Not announced",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_robinhood chain_0x5e48b3"
+            }
         }
     ],
-    "accomplished_count": 2,
-    "earned_usd": 20.0,
+    "accomplished_count": 3,
+    "earned_usd": 30.0,
     "skipped_count": 0
 }
