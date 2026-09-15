@@ -1,40 +1,28 @@
 {
     "last_summary_date": "2026-09-15",
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "visited_sources": [
-        "https://airdrops.io/amadeus-protocol/",
-        "https://airdropalert.com",
-        "https://airdrops.io/worldie/",
-        "https://airdrops.io/laptop/",
-        "https://airdrops.io/ammora/",
-        "https://airdrops.io/reels/",
-        "https://airdrops.io/c8ntinuum/",
-        "https://airdrops.io/blackboard/",
-        "https://airdrops.io/nado/",
         "https://airdrops.io/axis-robotics/",
+        "https://airdropalert.com",
+        "https://airdrops.io/c8ntinuum/",
+        "https://airdrops.io/worldie/",
+        "https://airdrops.io/ammora/",
+        "https://airdrops.io/blackboard/",
+        "https://airdrops.io/laptop/",
+        "https://airdrops.io/rep/",
+        "https://airdrops.io/vangrid/",
+        "https://airdrops.io/beldex/",
+        "https://airdrops.io/dualmint/",
+        "https://airdrops.io/amadeus-protocol/",
+        "https://airdrops.io/gyndore/",
+        "https://airdrops.io/nado/",
+        "https://airdrops.io/reels/",
         "https://opensea.io/drops",
         "https://airdrops.io",
-        "https://airdrops.io/rep/",
-        "https://airdrops.io/gyndore/",
-        "https://airdrops.io/beldex/",
-        "https://airdrops.io/entropy/",
-        "https://airdrops.io/vangrid/",
-        "https://airdrops.io/dualmint/"
+        "https://airdrops.io/entropy/"
     ],
-    "drops_processed": [
-        {
-            "title": "Axis Robotics",
-            "url": "https://airdrops.io/axis-robotics/",
-            "chain": "base",
-            "reward_type": "Allowlist/Points",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_base_0xc8424f"
-            }
-        }
-    ],
-    "accomplished_count": 1,
-    "earned_usd": 10.0,
+    "drops_processed": [],
+    "accomplished_count": 0,
+    "earned_usd": 0.0,
     "skipped_count": 0
 }
