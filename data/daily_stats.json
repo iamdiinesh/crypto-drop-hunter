@@ -1,42 +1,28 @@
 {
     "last_summary_date": "2026-09-17",
-    "date": "2026-09-17",
+    "date": "2026-09-18",
     "visited_sources": [
-        "https://airdrops.io/rep/",
-        "https://airdrops.io/nado/",
-        "https://airdrops.io/laptop/",
-        "https://airdrops.io/vangrid/",
-        "https://airdrops.io/worldie/",
-        "https://airdrops.io/entropy/",
-        "https://opensea.io/drops",
-        "https://airdrops.io/beldex/",
-        "https://airdrops.io/blackboard/",
-        "https://airdrops.io",
-        "https://airdrops.io/ammora/",
         "https://airdrops.io/wick/",
-        "https://airdrops.io/reels/",
+        "https://airdrops.io/rep/",
+        "https://airdrops.io/entropy/",
+        "https://airdrops.io/beldex/",
         "https://airdrops.io/dualmint/",
-        "https://airdrops.io/c8ntinuum/",
+        "https://airdrops.io/reels/",
+        "https://opensea.io/drops",
+        "https://airdrops.io/vangrid/",
+        "https://airdrops.io/nado/",
+        "https://airdrops.io",
         "https://airdrops.io/axis-robotics/",
-        "https://airdropalert.com",
+        "https://airdrops.io/ammora/",
+        "https://airdrops.io/laptop/",
+        "https://airdrops.io/worldie/",
+        "https://airdrops.io/blackboard/",
         "https://airdrops.io/gyndore/",
-        "https://airdrops.io/mint-io/",
+        "https://airdropalert.com",
         "https://airdrops.io/fables/"
     ],
-    "drops_processed": [
-        {
-            "title": "Fables",
-            "url": "https://airdrops.io/fables/",
-            "chain": "robinhood chain",
-            "reward_type": "Allowlist/Points",
-            "delivery_date": "Not confirmed LPs also receive weekly USDG rewards, funded by creator fees from ",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_robinhood chain_0xa9c334"
-            }
-        }
-    ],
-    "accomplished_count": 1,
-    "earned_usd": 10.0,
+    "drops_processed": [],
+    "accomplished_count": 0,
+    "earned_usd": 0.0,
     "skipped_count": 0
 }
