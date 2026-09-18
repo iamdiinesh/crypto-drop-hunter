@@ -1,89 +1,28 @@
 {
     "last_summary_date": "2026-09-18",
-    "date": "2026-09-18",
+    "date": "2026-09-19",
     "visited_sources": [
-        "https://airdrops.io/wick/",
-        "https://airdrops.io/rep/",
-        "https://airdrops.io/entropy/",
-        "https://airdrops.io/beldex/",
-        "https://airdrops.io/dualmint/",
-        "https://airdrops.io/reels/",
-        "https://opensea.io/drops",
-        "https://airdrops.io/vangrid/",
-        "https://airdrops.io/nado/",
-        "https://airdrops.io",
-        "https://airdrops.io/axis-robotics/",
-        "https://airdrops.io/ammora/",
-        "https://airdrops.io/laptop/",
-        "https://airdrops.io/worldie/",
-        "https://airdrops.io/blackboard/",
-        "https://airdrops.io/gyndore/",
-        "https://airdropalert.com",
-        "https://airdrops.io/fables/",
+        "https://airdrops.io/kryvora-network/",
         "https://airdrops.io/baibai/",
         "https://airdrops.io/acepyr/",
-        "https://airdrops.io/memebook/",
-        "https://airdrops.io/kryvora-network/",
-        "https://airdrops.io/vibe-vibe/"
+        "https://airdrops.io/fables/",
+        "https://airdrops.io/ammora/",
+        "https://airdrops.io/axis-robotics/",
+        "https://airdrops.io/vibe-vibe/",
+        "https://airdrops.io/wick/",
+        "https://airdrops.io/blackboard/",
+        "https://airdrops.io/laptop/",
+        "https://airdrops.io/rep/",
+        "https://opensea.io/drops",
+        "https://airdrops.io/vangrid/",
+        "https://airdrops.io/worldie/",
+        "https://airdrops.io/nado/",
+        "https://airdrops.io",
+        "https://airdropalert.com",
+        "https://airdrops.io/memebook/"
     ],
-    "drops_processed": [
-        {
-            "title": "BaiBai",
-            "url": "https://airdrops.io/baibai/",
-            "chain": "base",
-            "reward_type": "Allowlist/Points",
-            "delivery_date": "TBAPoints come mainly from trading",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_base_0xf5a5f0"
-            }
-        },
-        {
-            "title": "Memebook",
-            "url": "https://airdrops.io/memebook/",
-            "chain": "solana",
-            "reward_type": "Token",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_solana_0x3f7b94"
-            }
-        },
-        {
-            "title": "Kryvora Network",
-            "url": "https://airdrops.io/kryvora-network/",
-            "chain": "own chain",
-            "reward_type": "NFT",
-            "delivery_date": "TBA",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_own chain_0x7f3d8f"
-            }
-        },
-        {
-            "title": "Vibe Vibe",
-            "url": "https://airdrops.io/vibe-vibe/",
-            "chain": "robinhood chain",
-            "reward_type": "NFT",
-            "delivery_date": "TBAThe project is also building a second reward layer called Vibe Vibers, an NFT",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_robinhood chain_0x215102"
-            }
-        },
-        {
-            "title": "Acepyr",
-            "url": "https://airdrops.io/acepyr/",
-            "chain": "base",
-            "reward_type": "Allowlist/Points",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_base_0x4e1015"
-            }
-        }
-    ],
-    "accomplished_count": 5,
-    "earned_usd": 50.0,
+    "drops_processed": [],
+    "accomplished_count": 0,
+    "earned_usd": 0.0,
     "skipped_count": 0
 }
