@@ -1,29 +1,40 @@
 {
     "last_summary_date": "2026-09-21",
-    "date": "2026-09-21",
+    "date": "2026-09-22",
     "visited_sources": [
-        "https://airdrops.io/vangrid/",
         "https://airdrops.io",
-        "https://opensea.io/drops",
-        "https://airdrops.io/wick/",
-        "https://airdrops.io/fables/",
-        "https://airdrops.io/baibai/",
-        "https://airdrops.io/blackboard/",
-        "https://airdrops.io/ammora/",
-        "https://airdrops.io/nado/",
-        "https://airdrops.io/solpump/",
-        "https://airdrops.io/worldie/",
-        "https://airdrops.io/acepyr/",
-        "https://airdrops.io/laptop/",
-        "https://airdrops.io/rep/",
-        "https://airdropalert.com",
-        "https://airdrops.io/vibe-vibe/",
-        "https://airdrops.io/kryvora-network/",
         "https://airdrops.io/memebook/",
-        "https://airdrops.io/mint-io/"
+        "https://airdrops.io/fables/",
+        "https://airdrops.io/kryvora-network/",
+        "https://opensea.io/drops",
+        "https://airdrops.io/acepyr/",
+        "https://airdrops.io/baibai/",
+        "https://airdrops.io/wick/",
+        "https://airdrops.io/nado/",
+        "https://airdrops.io/rep/",
+        "https://airdrops.io/vibe-vibe/",
+        "https://airdrops.io/laptop/",
+        "https://airdrops.io/mint-io/",
+        "https://airdrops.io/worldie/",
+        "https://airdropalert.com",
+        "https://airdrops.io/bitvavo/",
+        "https://airdrops.io/blackboard/",
+        "https://airdrops.io/ammora/"
     ],
-    "drops_processed": [],
-    "accomplished_count": 0,
-    "earned_usd": 0.0,
+    "drops_processed": [
+        {
+            "title": "Bitvavo",
+            "url": "https://airdrops.io/bitvavo/",
+            "chain": "own chain",
+            "reward_type": "Money",
+            "delivery_date": "Not announced",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_own chain_0x00eb5a"
+            }
+        }
+    ],
+    "accomplished_count": 1,
+    "earned_usd": 10.0,
     "skipped_count": 0
 }
