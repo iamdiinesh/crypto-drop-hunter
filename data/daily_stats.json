@@ -1,36 +1,34 @@
 {
     "last_summary_date": "2026-09-22",
-    "date": "2026-09-22",
+    "date": "2026-09-23",
     "visited_sources": [
-        "https://airdrops.io",
+        "https://airdrops.io/blackboard/",
+        "https://airdrops.io/bitvavo/",
+        "https://airdrops.io/powerx-onewallet/",
+        "https://airdrops.io/laptop/",
         "https://airdrops.io/memebook/",
+        "https://airdrops.io/baibai/",
         "https://airdrops.io/fables/",
+        "https://airdrops.io/wick/",
+        "https://airdrops.io/ammora/",
+        "https://airdrops.io/vibe-vibe/",
+        "https://airdrops.io",
+        "https://airdrops.io/acepyr/",
         "https://airdrops.io/kryvora-network/",
         "https://opensea.io/drops",
-        "https://airdrops.io/acepyr/",
-        "https://airdrops.io/baibai/",
-        "https://airdrops.io/wick/",
-        "https://airdrops.io/nado/",
-        "https://airdrops.io/rep/",
-        "https://airdrops.io/vibe-vibe/",
-        "https://airdrops.io/laptop/",
-        "https://airdrops.io/mint-io/",
         "https://airdrops.io/worldie/",
-        "https://airdropalert.com",
-        "https://airdrops.io/bitvavo/",
-        "https://airdrops.io/blackboard/",
-        "https://airdrops.io/ammora/"
+        "https://airdropalert.com"
     ],
     "drops_processed": [
         {
-            "title": "Bitvavo",
-            "url": "https://airdrops.io/bitvavo/",
+            "title": "PowerX OneWallet",
+            "url": "https://airdrops.io/powerx-onewallet/",
             "chain": "own chain",
-            "reward_type": "Money",
-            "delivery_date": "Not announced",
+            "reward_type": "Token",
+            "delivery_date": "TBAEveryone who completes the tasks and verifies gets the same base amount, and ",
             "action_taken": {
                 "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_own chain_0x00eb5a"
+                "tx_hash": "0x_simulated_tx_own chain_0x760e2d"
             }
         }
     ],
