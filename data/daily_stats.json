@@ -1,5 +1,5 @@
 {
-    "last_summary_date": "2026-09-22",
+    "last_summary_date": "2026-09-23",
     "date": "2026-09-23",
     "visited_sources": [
         "https://airdrops.io/blackboard/",
@@ -18,7 +18,8 @@
         "https://opensea.io/drops",
         "https://airdrops.io/worldie/",
         "https://airdropalert.com",
-        "https://airdrops.io/nado/"
+        "https://airdrops.io/nado/",
+        "https://airdrops.io/czr/"
     ],
     "drops_processed": [
         {
@@ -31,9 +32,20 @@
                 "status": "Claimed Successfully",
                 "tx_hash": "0x_simulated_tx_own chain_0x760e2d"
             }
+        },
+        {
+            "title": "CZR",
+            "url": "https://airdrops.io/czr/",
+            "chain": "ethereum",
+            "reward_type": "Allowlist/Points",
+            "delivery_date": "October 1, 2026 (CZR/USDT spot trading on CZR Exchange)",
+            "action_taken": {
+                "status": "Skipped",
+                "reason": "Gas ($999.00) exceeds $20 hard limit"
+            }
         }
     ],
     "accomplished_count": 1,
     "earned_usd": 10.0,
-    "skipped_count": 0
+    "skipped_count": 1
 }
