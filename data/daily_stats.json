@@ -1,63 +1,28 @@
 {
     "last_summary_date": "2026-09-24",
-    "date": "2026-09-24",
+    "date": "2026-09-25",
     "visited_sources": [
-        "https://airdrops.io/nado/",
-        "https://airdrops.io/czr/",
-        "https://airdrops.io/worldie/",
-        "https://airdrops.io/kryvora-network/",
         "https://airdrops.io/powerx-onewallet/",
-        "https://airdrops.io/wick/",
+        "https://airdrops.io/synthra/",
+        "https://airdrops.io/worldie/",
+        "https://airdrops.io/axis-robotics/",
         "https://airdrops.io/baibai/",
-        "https://airdropalert.com",
-        "https://airdrops.io/bitvavo/",
-        "https://airdrops.io/acepyr/",
-        "https://airdrops.io/memebook/",
-        "https://airdrops.io/vibe-vibe/",
-        "https://airdrops.io/fables/",
         "https://opensea.io/drops",
-        "https://airdrops.io/ammora/",
         "https://airdrops.io",
-        "https://airdrops.io/blackboard/",
+        "https://airdrops.io/kryvora-network/",
+        "https://airdropalert.com",
+        "https://airdrops.io/nado/",
+        "https://airdrops.io/wick/",
+        "https://airdrops.io/memebook/",
         "https://airdrops.io/mindgames/",
-        "https://airdrops.io/synthra/"
+        "https://airdrops.io/czr/",
+        "https://airdrops.io/bitvavo/",
+        "https://airdrops.io/fables/",
+        "https://airdrops.io/vibe-vibe/",
+        "https://airdrops.io/blackboard/"
     ],
-    "drops_processed": [
-        {
-            "title": "Ammora",
-            "url": "https://airdrops.io/ammora/",
-            "chain": "ethereum",
-            "reward_type": "Token",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Skipped",
-                "reason": "Gas ($999.00) exceeds $20 hard limit"
-            }
-        },
-        {
-            "title": "Synthra",
-            "url": "https://airdrops.io/synthra/",
-            "chain": "arc",
-            "reward_type": "Allowlist/Points",
-            "delivery_date": "September 17, 2026 Points are share-based, so nothing pays a fixed amount per ac",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_arc_0x7b2178"
-            }
-        },
-        {
-            "title": "MindGames",
-            "url": "https://airdrops.io/mindgames/",
-            "chain": "robinhood chain",
-            "reward_type": "NFT",
-            "delivery_date": "Not announced",
-            "action_taken": {
-                "status": "Claimed Successfully",
-                "tx_hash": "0x_simulated_tx_robinhood chain_0x8b7961"
-            }
-        }
-    ],
-    "accomplished_count": 2,
-    "earned_usd": 20.0,
-    "skipped_count": 1
+    "drops_processed": [],
+    "accomplished_count": 0,
+    "earned_usd": 0.0,
+    "skipped_count": 0
 }
