@@ -20,8 +20,20 @@
         "https://airdrops.io",
         "https://airdrops.io/blackboard/"
     ],
-    "drops_processed": [],
+    "drops_processed": [
+        {
+            "title": "Ammora",
+            "url": "https://airdrops.io/ammora/",
+            "chain": "ethereum",
+            "reward_type": "Token",
+            "delivery_date": "Not announced",
+            "action_taken": {
+                "status": "Skipped",
+                "reason": "Gas ($999.00) exceeds $20 hard limit"
+            }
+        }
+    ],
     "accomplished_count": 0,
     "earned_usd": 0.0,
-    "skipped_count": 0
+    "skipped_count": 1
 }
