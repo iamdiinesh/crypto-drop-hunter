@@ -1,28 +1,40 @@
 {
     "last_summary_date": "2026-09-28",
-    "date": "2026-09-28",
+    "date": "2026-09-29",
     "visited_sources": [
-        "https://airdrops.io/mindgames/",
         "https://airdrops.io/axis-robotics/",
-        "https://airdrops.io/czr/",
-        "https://airdrops.io/wick/",
-        "https://airdrops.io/kryvora-network/",
-        "https://airdrops.io/baibai/",
-        "https://airdrops.io/synthra/",
-        "https://opensea.io/drops",
-        "https://airdrops.io/memebook/",
+        "https://airdropalert.com",
+        "https://airdrops.io/bitvavo/",
+        "https://airdrops.io/fables/",
         "https://airdrops.io/worldie/",
         "https://airdrops.io/vibe-vibe/",
-        "https://airdrops.io/fables/",
-        "https://airdrops.io/bitvavo/",
-        "https://airdropalert.com",
-        "https://airdrops.io/nado/",
-        "https://airdrops.io/blackboard/",
+        "https://airdrops.io/raycash/",
+        "https://airdrops.io/mindgames/",
+        "https://airdrops.io/baibai/",
+        "https://airdrops.io/wick/",
         "https://airdrops.io/powerx-onewallet/",
-        "https://airdrops.io"
+        "https://opensea.io/drops",
+        "https://airdrops.io",
+        "https://airdrops.io/czr/",
+        "https://airdrops.io/memebook/",
+        "https://airdrops.io/kryvora-network/",
+        "https://airdrops.io/synthra/",
+        "https://airdrops.io/nado/"
     ],
-    "drops_processed": [],
+    "drops_processed": [
+        {
+            "title": "Raycash",
+            "url": "https://airdrops.io/raycash/",
+            "chain": "polygon",
+            "reward_type": "Allowlist/Points",
+            "delivery_date": "Not announced",
+            "action_taken": {
+                "status": "Skipped",
+                "reason": "Gas ($999.00) exceeds $20 hard limit"
+            }
+        }
+    ],
     "accomplished_count": 0,
     "earned_usd": 0.0,
-    "skipped_count": 0
+    "skipped_count": 1
 }
