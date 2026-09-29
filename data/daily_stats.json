@@ -1,40 +1,40 @@
 {
     "last_summary_date": "2026-09-29",
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "visited_sources": [
-        "https://airdrops.io/axis-robotics/",
-        "https://airdropalert.com",
-        "https://airdrops.io/bitvavo/",
-        "https://airdrops.io/fables/",
-        "https://airdrops.io/worldie/",
-        "https://airdrops.io/vibe-vibe/",
-        "https://airdrops.io/raycash/",
-        "https://airdrops.io/mindgames/",
-        "https://airdrops.io/baibai/",
-        "https://airdrops.io/wick/",
-        "https://airdrops.io/powerx-onewallet/",
         "https://opensea.io/drops",
+        "https://airdrops.io/fables/",
+        "https://airdrops.io/vibe-vibe/",
+        "https://airdrops.io/wick/",
         "https://airdrops.io",
+        "https://airdrops.io/raycash/",
         "https://airdrops.io/czr/",
-        "https://airdrops.io/memebook/",
         "https://airdrops.io/kryvora-network/",
+        "https://airdrops.io/powerx-onewallet/",
+        "https://airdrops.io/mindgames/",
+        "https://airdrops.io/memebook/",
+        "https://airdrops.io/baibai/",
         "https://airdrops.io/synthra/",
-        "https://airdrops.io/nado/"
+        "https://airdrops.io/nado/",
+        "https://airdrops.io/axis-robotics/",
+        "https://airdrops.io/tastyco/",
+        "https://airdropalert.com",
+        "https://airdrops.io/bitvavo/"
     ],
     "drops_processed": [
         {
-            "title": "Raycash",
-            "url": "https://airdrops.io/raycash/",
-            "chain": "polygon",
+            "title": "TastyCo",
+            "url": "https://airdrops.io/tastyco/",
+            "chain": "bsc",
             "reward_type": "Allowlist/Points",
-            "delivery_date": "Not announced",
+            "delivery_date": "Q4 2026 (targeted)",
             "action_taken": {
-                "status": "Skipped",
-                "reason": "Gas ($999.00) exceeds $20 hard limit"
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_bsc_0xf23de2"
             }
         }
     ],
-    "accomplished_count": 0,
-    "earned_usd": 0.0,
-    "skipped_count": 1
+    "accomplished_count": 1,
+    "earned_usd": 10.0,
+    "skipped_count": 0
 }
