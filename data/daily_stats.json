@@ -1,28 +1,40 @@
 {
     "last_summary_date": "2026-09-30",
-    "date": "2026-10-01",
+    "date": "2026-10-02",
     "visited_sources": [
-        "https://airdrops.io/czr/",
-        "https://airdropalert.com",
-        "https://airdrops.io/axis-robotics/",
-        "https://airdrops.io/raycash/",
-        "https://airdrops.io/mindgames/",
-        "https://airdrops.io/fables/",
-        "https://opensea.io/drops",
-        "https://airdrops.io/nado/",
-        "https://airdrops.io/bitvavo/",
+        "https://airdrops.io/worldie/",
         "https://airdrops.io/powerx-onewallet/",
-        "https://airdrops.io",
         "https://airdrops.io/kryvora-network/",
-        "https://airdrops.io/baibai/",
+        "https://airdrops.io/vibe-vibe/",
+        "https://airdrops.io/axis-robotics/",
+        "https://airdrops.io/fables/",
         "https://airdrops.io/wick/",
+        "https://airdrops.io/raycash/",
         "https://airdrops.io/memebook/",
-        "https://airdrops.io/synthra/",
         "https://airdrops.io/tastyco/",
-        "https://airdrops.io/vibe-vibe/"
+        "https://opensea.io/drops",
+        "https://airdrops.io/synthra/",
+        "https://airdropalert.com",
+        "https://airdrops.io/czr/",
+        "https://airdrops.io/mindgames/",
+        "https://airdrops.io/risex/",
+        "https://airdrops.io",
+        "https://airdrops.io/baibai/"
     ],
-    "drops_processed": [],
-    "accomplished_count": 0,
-    "earned_usd": 0.0,
+    "drops_processed": [
+        {
+            "title": "RISEx",
+            "url": "https://airdrops.io/risex/",
+            "chain": "own chain",
+            "reward_type": "Allowlist/Points",
+            "delivery_date": "Not yet announced Season 1: Ignite went live on July 20, 2026, with the first we",
+            "action_taken": {
+                "status": "Claimed Successfully",
+                "tx_hash": "0x_simulated_tx_own chain_0x807ba8"
+            }
+        }
+    ],
+    "accomplished_count": 1,
+    "earned_usd": 10.0,
     "skipped_count": 0
 }
